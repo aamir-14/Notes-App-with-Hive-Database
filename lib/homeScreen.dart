@@ -20,9 +20,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF1C1B1B),
       appBar: AppBar(
-        title: Text("Hive Database"),
-        backgroundColor: Colors.amberAccent,
+        title: Text("Hive Database", style: TextStyle(
+          color: Color(0xFFBB86FC)
+        ),),
+        backgroundColor:Color(0xFF000000),
       ),
 
       body: ValueListenableBuilder<Box<NotesModel>>(
@@ -36,7 +39,9 @@ class _HomeScreenState extends State<HomeScreen> {
             shrinkWrap: true,
             itemBuilder: (context, index){
               return Card(
+                color: Color(0xFF313030),
                 child: Padding(
+                  
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -87,6 +92,9 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
+
+//        Dialog for Adding Notes  
 
   Future<void> showmyDialogue () async {
 
@@ -155,10 +163,16 @@ class _HomeScreenState extends State<HomeScreen> {
        );
   }
 
+
+  //  Delete Function
+
   void delete (NotesModel notesmodel)async{
    await  notesmodel.delete();
   }
 
+
+
+//          Dialog for Updating Notes
 
   Future<void> updateDialog (NotesModel notesmodel, String title, String des) async {
 
