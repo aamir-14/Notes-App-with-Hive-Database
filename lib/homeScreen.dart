@@ -11,10 +11,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Hive Database"),
+        backgroundColor: Colors.amberAccent,
+      ),
 
       body: Column(
         children: [
-          
+
         ],
       ),
     );
