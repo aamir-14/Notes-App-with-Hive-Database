@@ -51,7 +51,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           Column(
                             children: [
-                              Text(data[index].title.toString(),),
+                              Text(data[index].title.toString(),
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600
+                              ),),
                               Text(data[index].description.toString())
 
 
@@ -93,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             width: 35,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Color(0xFF006A60)
+                              color: Color.fromRGBO(250, 197, 197, 1)
                             ),
                             child: Center(
                               child: 
