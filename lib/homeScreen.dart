@@ -15,6 +15,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final titleController = TextEditingController();
   final descController = TextEditingController();
+  
+  final updatetitle = TextEditingController();
+  final updatedescription = TextEditingController();
+
 
 
   @override
@@ -178,6 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               TextFormField(
                 controller: descController,
+                maxLength: 10,
                 decoration: InputDecoration(
                   hintText: "Enter Description"
                 
@@ -235,22 +240,22 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> updateDialog (NotesModel notesmodel, String title, String des) async {
 
-    titleController.text = title;
-    descController.text = des;
+    updatetitle.text = title;
+    updatedescription.text = des;
 
     return showDialog(
       context: context,
        builder: (context){
        
        return AlertDialog(
-        title: Text(" Add Note"),
+        title: Text(" Update Note"),
         content: SingleChildScrollView(
           child: Column(
 
             children: [
 
               TextFormField(
-                controller: titleController,
+                controller: updatetitle,
                 decoration: InputDecoration(
                   hintText: "Enter Title"
                 
@@ -258,7 +263,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               TextFormField(
-                controller: descController,
+                controller: updatedescription,
                 decoration: InputDecoration(
                   hintText: "Enter Description"
                 
