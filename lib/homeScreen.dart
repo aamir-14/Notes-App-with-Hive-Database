@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           Column(
                             children: [
-                              Text(data[index].title.toString()),
+                              Text(data[index].title.toString(),),
                               Text(data[index].description.toString())
 
 
@@ -61,15 +61,28 @@ class _HomeScreenState extends State<HomeScreen> {
                            Spacer(),
 
                            Container(
+                            height: 35,
+                            width: 35,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               color: Color(0xFF006A60)
                             ),
-                            child: IconButton(onPressed: (){
-                            updateDialog(data[index], data[index].title.toString(), data[index].description.toString());
-
-                           }, 
-                           icon: Icon(Icons.edit, color: Color(0xFF4FFBE6),)),
+                            child: Center(
+                              child: IconButton(
+                                onPressed: () {
+                                  updateDialog(
+                                    data[index],
+                                    data[index].title.toString(),
+                                    data[index].description.toString(),
+                                  );
+                                },
+                                icon: Icon(
+                                  Icons.edit,
+                                  size: 20,
+                                  color: Color(0xFF4FFBE6),
+                                ),
+                              ),
+                            ),
 
                            ),
 
