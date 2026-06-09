@@ -291,8 +291,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           TextButton(onPressed: (){
-            titleController.clear();
-            descController.clear();
+            updatetitle.clear();
+            updatedescription.clear();
              Navigator.pop(context);
           },
            child: Text("Cancel")
@@ -305,8 +305,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
             notesmodel.save();
 
-            titleController.clear();
-            descController.clear();
+            updatetitle.clear();
+            updatedescription.clear();
             Navigator.pop(context);
            
            
