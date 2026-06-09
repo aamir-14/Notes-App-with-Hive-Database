@@ -19,6 +19,9 @@ class _HomeScreenState extends State<HomeScreen> {
   final updatetitle = TextEditingController();
   final updatedescription = TextEditingController();
 
+  final viewtitle = TextEditingController();
+  final viewdescription = TextEditingController();
+
 
 
   @override
@@ -56,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Expanded(
                             child: GestureDetector(
                               onTap: () {
-                                viewNote(data[index],
+                                viewNote(
                                       data[index].title.toString(),
                                       data[index].description.toString()
                                       );
@@ -73,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),),
                                   Text(data[index].description.toString(),
                                   maxLines: 1,
-                                  overflow: TextOverflow.fade,)
+                                  overflow: TextOverflow.ellipsis,)
                               
                               
                                 ],
@@ -180,6 +183,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               TextFormField(
                 controller: titleController,
+                maxLength: 15,
                 decoration: InputDecoration(
                   hintText: "Enter Title"
                 
@@ -296,8 +300,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
            TextButton(onPressed: (){
 
-            notesmodel.title = titleController.text.toString();
-            notesmodel.description = descController.text.toString();
+            notesmodel.title = updatetitle.text.toString();
+            notesmodel.description = updatedescription.text.toString();
 
             notesmodel.save();
 
@@ -324,10 +328,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
   
-  Future<void> viewNote (NotesModel notesmodel, String title, String des) async {
+  Future<void> viewNote ( String title, String des) async {
 
-    titleController.text = title;
-    descController.text = des;
+  viewtitle.text =title;
+  viewdescription.text = des;
 
     return showDialog(
       context: context,
@@ -339,6 +343,9 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
 
            TextButton(onPressed: (){
+            viewtitle.clear();
+            viewdescription.clear();
+            
             Navigator.pop(context);
            },
             child: Text("Exit"))
