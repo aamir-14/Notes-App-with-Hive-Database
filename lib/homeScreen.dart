@@ -49,17 +49,26 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Row(
                         children: [
-                          Column(
-                            children: [
-                              Text(data[index].title.toString(),
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600
-                              ),),
-                              Text(data[index].description.toString())
-
-
-                            ],
+                          GestureDetector(
+                            onTap: () {
+                              viewNote(data[index],
+                                    data[index].title.toString(),
+                                    data[index].description.toString()
+                                    );
+                            },
+                            
+                            child: Column(
+                              children: [
+                                Text(data[index].title.toString(),
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600
+                                ),),
+                                Text(data[index].description.toString())
+                            
+                            
+                              ],
+                            ),
                           ),
                            
                            Spacer(),
@@ -284,6 +293,38 @@ class _HomeScreenState extends State<HomeScreen> {
 
            },
             child: Text("Update"))
+
+        ],
+       );
+        
+       }
+       );
+  }
+
+
+
+  //  Dialog for Viewing Notes
+
+
+  
+  Future<void> viewNote (NotesModel notesmodel, String title, String des) async {
+
+    titleController.text = title;
+    descController.text = des;
+
+    return showDialog(
+      context: context,
+       builder: (context){
+       
+       return AlertDialog(
+        title: Text(title),
+        content: Text(des),
+        actions: [
+
+           TextButton(onPressed: (){
+            Navigator.pop(context);
+           },
+            child: Text("Exit"))
 
         ],
        );
