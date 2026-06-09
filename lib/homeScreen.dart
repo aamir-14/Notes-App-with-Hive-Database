@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             updateDialog(data[index], data[index].title.toString(), data[index].description.toString());
 
                            }, 
-                           icon: Icon(Icons.edit)),
+                           icon: Icon(Icons.edit, color: Color(0xFF03dac6),)),
 
                            IconButton(onPressed: (){
                             delete(data[index]);
