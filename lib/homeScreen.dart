@@ -53,25 +53,31 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Row(
                         children: [
-                          GestureDetector(
-                            onTap: () {
-                              viewNote(data[index],
-                                    data[index].title.toString(),
-                                    data[index].description.toString()
-                                    );
-                            },
-                            
-                            child: Column(
-                              children: [
-                                Text(data[index].title.toString(),
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600
-                                ),),
-                                Text(data[index].description.toString())
-                            
-                            
-                              ],
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () {
+                                viewNote(data[index],
+                                      data[index].title.toString(),
+                                      data[index].description.toString()
+                                      );
+                              },
+                              
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(data[index].title.toString(),
+                                  
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600
+                                  ),),
+                                  Text(data[index].description.toString(),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.fade,)
+                              
+                              
+                                ],
+                              ),
                             ),
                           ),
                            
@@ -182,7 +188,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
               TextFormField(
                 controller: descController,
-                maxLength: 10,
+               // maxLength: 10,
+               maxLines: 2,
                 decoration: InputDecoration(
                   hintText: "Enter Description"
                 
@@ -196,6 +203,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           TextButton(onPressed: (){
+            titleController.clear();
+           descController.clear();
+
              Navigator.pop(context);
           },
            child: Text("Cancel")
@@ -277,6 +287,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           TextButton(onPressed: (){
+            titleController.clear();
+            descController.clear();
              Navigator.pop(context);
           },
            child: Text("Cancel")
