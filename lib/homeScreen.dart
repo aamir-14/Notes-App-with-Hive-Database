@@ -85,14 +85,32 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
 
                            ),
+                           SizedBox(width: 5,),
 
-                           
+
+                           Container(
+                            height: 35,
+                            width: 35,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color(0xFF006A60)
+                            ),
+                            child: Center(
+                              child: 
                            IconButton(onPressed: (){
                             delete(data[index]);
 
                            }, 
-                           icon: Icon(Icons.delete, color: Colors.red,))
+                                icon: Icon(Icons.delete, 
+                                size: 20,
+                                color: Colors.red),
+                              )
 
+                            ),
+
+                           ),
+
+                           
                         ],
                       ),
                      
