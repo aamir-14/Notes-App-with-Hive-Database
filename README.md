@@ -24,14 +24,16 @@ A Flutter Notes Application built using Hive Local Database. This project demons
 
 ## Project Structure
 
+```text
 lib/
-|── boxes/
-│ └── box1.dart
-|── Models/
-│ └── notes_model.dart
-| └── notes_model.g.dart
+├── boxes/
+│   └── box1.dart
+├── Models/
+│   ├── notes_model.dart
+│   └── notes_model.g.dart
 ├── homeScreen.dart
 └── main.dart
+```
 
 ## Screenshots
 
@@ -42,10 +44,6 @@ lib/
 ### Add Note Dialog
 
 ![Add Note](assets/addnote.png)
-
-### Update Note Dialog
-
-![Update Note](assets/screenshots/update_note.png)
 
 
 
