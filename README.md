@@ -1,17 +1,88 @@
-# notes_app_with_hive
+# Notes App with Hive Database
 
-A new Flutter project.
+A Flutter Notes Application built using Hive Local Database. This project demonstrates how to perform CRUD (Create, Read, Update, Delete) operations using Hive and display real-time updates in the UI.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+* Create Notes
+* View Notes
+* Update Notes
+* Delete Notes
+* Real-time UI updates using ValueListenableBuilder
+* Dark Theme UI
+* Local data persistence with Hive
+* Text overflow handling
+* Dialog-based note management
 
-A few resources to get you started if this is your first Flutter project:
+## Technologies Used
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+* Flutter
+* Dart
+* Hive Database
+* Hive Flutter
+* ValueListenableBuilder
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Structure
+
+lib/
+|── boxes/
+│ └── box1.dart
+|── Models/
+│ └── notes_model.dart
+| └── notes_model.g.dart
+├── homeScreen.dart
+└── main.dart
+
+## Screenshots
+
+## Screenshots
+
+### Home Screen
+
+![Home Screen](assets/homeScreen.png)
+
+### Add Note Dialog
+
+![Add Note](assets/screenshots/add_note.png)
+
+### Update Note Dialog
+
+![Update Note](assets/screenshots/update_note.png)
+
+
+
+## Learning Outcomes
+
+Through this project I learned:
+
+* Hive local database integration
+* Hive TypeAdapter generation
+* CRUD operations using Hive
+* Data persistence in Flutter
+* Real-time UI updates with ValueListenableBuilder
+* Dialog and form handling
+
+## Installation
+
+1. Clone the repository
+
+git clone <https://github.com/aamir-14/Notes-App-with-Hive-Database.git>
+
+2. Navigate to the project
+
+cd notes_app_with_hive
+
+3. Install dependencies
+
+flutter pub get
+
+4. Run the application
+
+flutter run
+
+## Author
+
+Muhammad Aamir Iqbal
+
+BS Information Technology Student
+Junior Flutter Developer
