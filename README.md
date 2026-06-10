@@ -62,19 +62,27 @@ Through this project I learned:
 
 1. Clone the repository
 
-git clone <https://github.com/aamir-14/Notes-App-with-Hive-Database.git>
+```bash
+git clone https://github.com/aamir-14/Notes-App-with-Hive-Database.git
+```
 
 2. Navigate to the project
 
+```bash
 cd notes_app_with_hive
+```
 
 3. Install dependencies
 
+```bash
 flutter pub get
+```
 
 4. Run the application
 
+```bash
 flutter run
+```
 
 ## Author
 
