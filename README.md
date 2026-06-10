@@ -88,5 +88,6 @@ flutter run
 
 Muhammad Aamir Iqbal
 
-BS Information Technology Student
-Junior Flutter Developer
+- BS Information Technology Student
+- Junior Flutter Developer
+- Flutter & Mobile App Development Enthusiast
