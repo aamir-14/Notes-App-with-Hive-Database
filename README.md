@@ -35,15 +35,13 @@ lib/
 
 ## Screenshots
 
-## Screenshots
-
 ### Home Screen
 
 ![Home Screen](assets/homeScreen.png)
 
 ### Add Note Dialog
 
-![Add Note](assets/screenshots/add_note.png)
+![Add Note](assets/addnote.png)
 
 ### Update Note Dialog
 
